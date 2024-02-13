@@ -15,6 +15,7 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants :
 2. Téléchargez les images des routeurs Cisco 7200 compatibles avec GNS3.
 3. Importez les images du routeur dans GNS3.
 4. Configurez les interfaces réseau et les connexions nécessaires dans GNS3 pour simuler la topologie réseau souhaitée.
+![schema cisco ztp](./img/schema_cisco_ztp.png "schema cisco ztp")
 
 ## Configuration de ZTP
 1. Activez ZTP sur les routeurs Cisco 7200 en configurant les paramètres nécessaires dans la configuration du routeur.
@@ -40,6 +41,9 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants :
 
 ## Vérification de la configuration ZTP
 1. Surveillez les journaux du serveur ZTP pour vous assurer que les routeurs demandent des fichiers de configuration.
+   1. sudo tail -f /var/log/syslog | grep dhcpd
+   2. sudo tail -f /var/log/syslog | grep tftpd
+
 2. Vérifiez que les routeurs reçoivent les fichiers de configuration et appliquent les configurations automatiquement.
 3. Tester la connectivité entre les routeurs et le client sur le backbone de l'opérateur pour s'assurer de la réussite de la configuration.
 

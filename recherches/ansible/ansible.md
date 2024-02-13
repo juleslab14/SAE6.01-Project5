@@ -11,4 +11,13 @@ pas sûr de ce truc mais bon :
 - bgp management with ansible validated using the network (fichier en yaml)<https://www.ansible.com/blog/bgp-management-with-ansible-validated-content-using-the-network.bgp-collection>
 - une vidéo ytb de 53mins oskour x( <https://www.youtube.com/watch?v=dMVLzUkqQYg&ab_channel=NetworkJourney> ![Chaîne youtube en Inde mdrr](./inde.png)
 
-- 
+- bgp address family (je ne sais pas si on va en avoir besoin donc bon on ne sait jamais) <https://docs.ansible.com/ansible/latest/collections/cisco/ios/ios_bgp_address_family_module.html>
+
+## Mise en place de OSPF sur les routeurs 
+
+- cisco
+
+
+
+
+<https://berndonline.medium.com/ansible-playbook-for-cisco-bgp-routing-topology-21a1a35bd543>

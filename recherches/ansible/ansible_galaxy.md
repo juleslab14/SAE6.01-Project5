@@ -1,4 +1,4 @@
-# Liste des modules disponibleq sur Ansible Galaxy qui peuvent être utiles pour le projet
+# Liste des modules disponibles sur Ansible Galaxy qui peuvent être utiles pour le projet
 
 ## Il s'agit de modules provenant de la collection cisco.ios
 
@@ -16,3 +16,8 @@ lien : <https://galaxy.ansible.com/ui/repo/published/cisco/ios/content/module/io
 
 - ios_ospfv3 : module pour configurer OSPF v3. Testé sur la version IOS-XE 17.3 dans Cisco Moduling Labs (CML).
 lien : <https://galaxy.ansible.com/ui/repo/published/cisco/ios/content/module/ios_ospfv3/>
+
+Liens utiles :
+
+- <https://docs.ansible.com/ansible/latest/network/user_guide/platform_ios.html>
+- <https://docs.ansible.com/ansible/latest/collections_guide/index.html>

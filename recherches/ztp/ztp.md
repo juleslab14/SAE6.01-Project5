@@ -17,9 +17,24 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants :
 
 ## Configuration de ZTP
 1. Activez ZTP sur les routeurs Cisco 7200 en configurant les paramètres nécessaires dans la configuration du routeur.
+
 2. Configurez un serveur ZTP sur votre réseau pour fournir les fichiers de configuration aux routeurs.
+
 3. Créez les fichiers de configuration pour chaque routeur, en spécifiant les paramètres de configuration souhaités.
+
 4. Configurez le serveur DHCP sur le serveur ZTP pour qu'il fournisse des adresses IP aux routeurs et spécifiez l'adresse IP du serveur ZTP en tant qu'option du serveur suivant.
+   1. Configurez le pool DHCP. Dans cet exemple, nous créons un pool nommé "ZTPPOOL" : 
+      1. Router(config)# ip dhcp pool ZTPPOOL
+
+   2. Configurez la plage d'adresses IP à distribuer. Dans cet exemple, nous configurons une plage de 192.0.2.10 à 192.0.2.50 :
+      1. Router(dhcp-config)# network 192.0.2.0 255.255.255.0
+
+   3. Configurez l'adresse du serveur TFTP où les fichiers de configuration sont stockés. Dans cet exemple, nous utilisons l'adresse 192.0.2.1 :
+      1. Router(dhcp-config)# default-router 192.0.2.1
+      
+   4. Configurez l'option 150 pour spécifier l'adresse du serveur TFTP. Dans cet exemple, nous utilisons l'adresse 192.0.2.1 :
+      1. Router(dhcp-config)# option 150 ip 192.0.2.1
+   
 5. Connectez les routeurs au réseau et mettez-les sous tension.
 
 ## Vérification de la configuration ZTP
@@ -29,3 +44,4 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants :
 
 ## Conclusion
 En utilisant les routeurs Cisco 7200 avec GNS3 et ZTP, vous pouvez automatiser le processus de configuration des routeurs connectés au client sur le backbone de l'opérateur. Cela facilite le déploiement et la gestion de l'infrastructure réseau.
+

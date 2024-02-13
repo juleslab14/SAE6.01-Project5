@@ -9,6 +9,10 @@ https://www.reddit.com/r/networking/comments/hu7bdd/gns3_vs_eveng/?rdt=39956
 
 EVE-NG : 
 +Prend en charge plus de constructeur et resite mieux au gros réseaux
-+
+-Demande beaucoup de bon matteriel pour bien fonctionner
++Integre tout les besoins reseau pour le projet
+-Acces en WEB seulement pour les labs, une connexion possible à la fois, empechant plusieurs personne à travailler en simultanné
+
+GNS3 : 
 
 ##Pour integrer une VM dans le lab :

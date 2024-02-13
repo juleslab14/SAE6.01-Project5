@@ -1,3 +1,5 @@
-#Ansible
-- https://galaxy.ansible.com/ui/repo/published/cisco/ios/docs/
-- 
+# Ansible
+
+- <https://galaxy.ansible.com/ui/repo/published/cisco/ios/docs/>
+- <https://gblogs.cisco.com/fr/reseaux/manager-vos-equipements-cisco-avec-ansible/>
+- <https://routebythescript.com/using-yaml-and-jinja-to-create-network-configurations/>

@@ -7,6 +7,7 @@ Dans ce guide, nous allons explorer comment utiliser les routeurs Cisco 7200 ave
 Avant de commencer, assurez-vous d'avoir les éléments suivants :
 - GNS3 installé sur votre machine
 - Images du routeur Cisco 7200 pour GNS3
+
 - Une compréhension de base des concepts de réseau et de la configuration des routeurs Cisco.
 
 ## Configuration de GNS3
@@ -31,7 +32,7 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants :
 
    3. Configurez l'adresse du serveur TFTP où les fichiers de configuration sont stockés. Dans cet exemple, nous utilisons l'adresse 192.0.2.1 :
       1. Router(dhcp-config)# default-router 192.0.2.1
-      
+
    4. Configurez l'option 150 pour spécifier l'adresse du serveur TFTP. Dans cet exemple, nous utilisons l'adresse 192.0.2.1 :
       1. Router(dhcp-config)# option 150 ip 192.0.2.1
    

@@ -5,4 +5,10 @@ https://letmetechyou.com/eve-ng-vs-gns3-complete-2022-review/
 https://gns3.com/why-should-i-use-gns3-over-eve-n
 https://www.reddit.com/r/networking/comments/hu7bdd/gns3_vs_eveng/?rdt=39956
 
+##En bref : 
+
+EVE-NG : 
++Prend en charge plus de constructeur et resite mieux au gros réseaux
++
+
 ##Pour integrer une VM dans le lab :

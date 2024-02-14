@@ -1,3 +1,16 @@
 {{ device }}
 
 {% for int in interfaces -%}
+interfaces {{ int.name}}
+    ip address {{int.ip}} {{int.mask}}
+    {% if int.state == "enabled" -%}
+    no shutdown
+    {% else -%}
+    shutdown
+    {% endif -%}
+!
+{% endfor -%}
+router bgp {{ bgpasn }}
+{% for neighbor in bgp_neighbor -%}
+    neighbor {{ neighbor.ip }} remote-as {{ neighbor.remote_as}}
+{% endfor -%}

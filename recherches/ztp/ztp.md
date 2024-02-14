@@ -19,6 +19,26 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants :
 
 ## Configuration de ZTP
 1. Activez ZTP sur les routeurs Cisco 7200 en configurant les paramètres nécessaires dans la configuration du routeur.
+![schema cisco ztp](./img/schema_cisco_ztp2.png "schema cisco ztp")
+   1. Pour le port vers les serveurs tftp dhcp:
+      1. Router(config)# interface Gigabit 1/1
+      2. Router(config)# lldp med-tvl-select network-policy
+      3. Router(config)# lldp transmit
+      4. Router(config)# lldp receive
+      5. Router(config)# exit
+      6. Router(config)# lldp run
+
+   2. Pour les ports connectés aux autres routeur de la backbone:
+      1. Router(config)# interface Gigabit 1/2 
+      2. Router(config)# switchport mode trunk
+      3. Router(config)# lldp med media-vlan policy-list 1  -> Assigning media VLAN policy
+      4. Router(config)# lldp med type connectivity   -> Configuring NID1 as network device
+      5. Router(config)# no spanning-tree
+      6. Router(config)# lldp transmit    -> LLDP transmission is enabled
+      7. Router(config)# lldp receive     -> LLDP reception is enabled
+   3. Sur l'équipement en face du port précédent:
+      1. Router(config)# lldp med media-vlan-policy 1 voice tagged 10 l2-priority 0 dscp 0
+      
 
 2. Configurez un serveur ZTP sur votre réseau pour fournir les fichiers de configuration aux routeurs.
 
@@ -40,6 +60,7 @@ Avant de commencer, assurez-vous d'avoir les éléments suivants :
 5. Connectez les routeurs au réseau et mettez-les sous tension.
 
 ## Vérification de la configuration ZTP
+![ztp check list](./img/ztp_check_list.png "ztp check list")
 1. Surveillez les journaux du serveur ZTP pour vous assurer que les routeurs demandent des fichiers de configuration.
    1. sudo tail -f /var/log/syslog | grep dhcpd
    2. sudo tail -f /var/log/syslog | grep tftpd

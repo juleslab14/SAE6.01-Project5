@@ -16,3 +16,7 @@ EVE-NG :
 GNS3 : 
 
 ##Pour integrer une VM dans le lab :
+
+
+
+PROXMOX DE MERDE

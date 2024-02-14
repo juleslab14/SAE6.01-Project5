@@ -45,7 +45,7 @@ devices:
     bgp_neighbors:
       - ip: '10.10.10.2'
         remote_as: '101'
-  - name: 'R2' #à faire pour les differents routeurs c'est super opti mais bon c'est déjà un début :)
+  - name: 'R2' #à faire pour les differents routeurs c'est pas super opti mais bon c'est déjà un début :)
     interfaces:
       - name: "Ethernet1/1"
         state: "enabled"

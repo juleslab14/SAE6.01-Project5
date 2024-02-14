@@ -1,0 +1,12 @@
+---
+- hosts: ios
+  gather_facts: false
+  task:
+    - name: Network BGP Management
+      ansible.builtin.include_role:
+        name: network.bgp.run
+      vars:
+        ansible_network_os: cisco.ios.ios
+        actions:
+          - name: persist
+#c'est juste un exemple d'un fichier inventory.yaml

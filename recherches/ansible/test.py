@@ -11,5 +11,9 @@ with open("exemple.yml") as file:
 with open("exemple.j2") as file:
     template = Template(file.read())
 
+#utilisation de jinja
+for info in info_router["devices"]:
+    print(template.render(device=info["name"],interfaces=info["interfaces"],bgpasn=info["bgpasn"],bgp_neighbors=info["bgp_neighbors"]))
+
 
 #p(info_router)

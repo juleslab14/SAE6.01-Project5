@@ -1,7 +1,7 @@
 #test d'un script python
 import yaml
 from jinja2 import Template
-from pprint import pprint as p
+#from pprint import pprint as p
 
 #lire le fichier yaml
 with open("exemple.yml") as file:

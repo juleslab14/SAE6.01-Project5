@@ -12,7 +12,7 @@
 #c'est juste un exemple d'un fichier inventory.yaml
 
 #exemple fchier de pour un routeur, source : Ansible
-#---
+---
 bgp_global: 
   as_number: '500'
   bgp:

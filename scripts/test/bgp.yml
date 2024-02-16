@@ -24,7 +24,11 @@
     operation: merge
 
 - name: Configure les voisins BGP
-
+  ios_bgp:
+    config:
+    bgp_as: 100
+    neighbors:
+      - neighbors: 
 
 
 

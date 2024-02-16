@@ -22,7 +22,8 @@ https://www.reddit.com/r/networking/comments/hu7bdd/gns3_vs_eveng/?rdt=39956
 -Propose moins de multimarque (principalement Cisco), mais pas derangeant pour notre projet
 +Plus stable que EVE-NG en regle general (Probleme rencontré lors de la SAE501)
 
-Choix final : VM Debian faisant tourné une instance GNS3 sur le proxmox PVE8 de la salle Oresme (3258)
+Choix final : VM Ubuntu serveur (install plus facile) faisant tourné une instance GNS3 sur le proxmox PVE8 de la salle Oresme (3258),
+permettant à tout le monde de travailler sur la meme session sans problème
 
 ## Pour integrer une VM dans le lab :
 

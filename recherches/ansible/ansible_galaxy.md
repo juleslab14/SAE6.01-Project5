@@ -31,4 +31,4 @@ Ce lien détaille comment utiliser le mode Enable sur les IOS dans Ansible.
 - <https://docs.ansible.com/ansible/latest/collections_guide/index.html>
 
 - <https://github.com/ipspace/MPLS-infrastructure> : playbook trouvé sur Github permettant de déployer des configurations OSPF/IBGP/EBGP et MPLS/VPN sur des IOS.
-/!\ Le dépôt n'a pas eu de changement depuis 6ans mais je pense que ça peut donner des exemples.
+/!\ Le dépôt n'a pas eu de changement depuis 6ans, c'est donc très certainement obsolète, mais je pense que ça peut donner des exemples.

@@ -1,0 +1,35 @@
+---
+devices:
+  - name: 'R3'
+    bgpasn: '55'
+    router_id: "192.168.0.3"
+    bgp_neighbors:
+      - ip: '192.186.0.2'
+        remote_as: '55'
+        update_source: "Loopback0"
+      - ip: '192.168.0.4'
+        remote_as: '55'
+        update_source: "Loopback0"
+      - ip: '192.168.0.1'
+        remote_as: '55'
+        update_source: "Loopback0"
+    address_family:
+      - afi: ipv4
+        safi: unicast
+        neighbors:
+          - neighbors: '192.186.0.2'
+            activate: yes
+          - neighbors: '192.186.0.4'
+            activate: yes
+          - neighbors: '192.186.0.1'
+            activate: yes
+  - name: 'R2' #à faire pour les differents routeurs c'est pas super opti mais bon c'est déjà un début :)
+    interfaces:
+      - name: "Ethernet1/1"
+        state: "enabled"
+        ip: "10.10.10.2"
+        mask: "255.255.255.0"
+    bgpasn: "101"
+    bgp_neighbors:
+      - ip: "10.10.10.1"
+        remote_as: "100"

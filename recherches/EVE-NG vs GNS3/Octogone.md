@@ -21,6 +21,7 @@ https://www.reddit.com/r/networking/comments/hu7bdd/gns3_vs_eveng/?rdt=39956
 * +On sait déja integrer une VM dans un schémac
 * -Propose moins de multimarque (principalement Cisco), mais pas derangeant pour notre projet
 * +Plus stable que EVE-NG en regle general (Probleme rencontré lors de la SAE501)
+* +Script d'installation proposé par GNS3 pour télécharger sur une machine ubuntu serveur
 
 Choix final : VM Ubuntu serveur (install plus facile, par script) avec l'ip 192.168.222.252 faisant tourné une instance GNS3 sur le proxmox PVE8 (192.168.222.248) de la salle Oresme (3258), permettant à tout le monde de travailler sur la meme session sans problème
 

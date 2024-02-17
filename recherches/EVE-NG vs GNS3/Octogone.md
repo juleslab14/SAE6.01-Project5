@@ -29,4 +29,4 @@ Choix final : VM Ubuntu serveur (install plus facile, par script) avec l'ip 192.
 
 ## Le lab 
 
-La lab est composé de 5 routeur cisco 7200 pour representer un petit backbone operateur compoosé ainsi : (../schéma.jpg)
+La lab est composé de 5 routeur cisco 7200 pour representer un petit backbone operateur compoosé ainsi : ![Schéma](../schéma.jpg)

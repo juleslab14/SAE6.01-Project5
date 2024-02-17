@@ -30,4 +30,4 @@ Choix final : VM Ubuntu serveur (install plus facile, par script) avec l'ip 192.
 
 ### Le lab 
 
-La lab est composé de 5 routeur cisco 7200 pour representer un petit backbone operateur compoosé ainsi : ![Schéma](https://github.com/juleslab14/SAE6.01-Project5/blob/main/schéma.jpg)
+La lab est composé de 5 routeur cisco 7200 ainsi que deux VM, une pour l'automatisation avec ansible et une autre pour faire des test sur le ZTP, cela nous permet de simuler un petit backbone operateur compoosé ainsi : ![Schéma](https://github.com/juleslab14/SAE6.01-Project5/blob/main/schéma.jpg)

@@ -25,9 +25,9 @@ https://www.reddit.com/r/networking/comments/hu7bdd/gns3_vs_eveng/?rdt=39956
 
 Choix final : VM Ubuntu serveur (install plus facile, par script) avec l'ip 192.168.222.252 faisant tourné une instance GNS3 sur le proxmox PVE8 (192.168.222.248) de la salle Oresme (3258), permettant à tout le monde de travailler sur la meme session sans problème
 
-## Pour integrer une VM dans le lab :
+### Pour integrer une VM dans le lab : 
 
 
-## Le lab 
+### Le lab 
 
 La lab est composé de 5 routeur cisco 7200 pour representer un petit backbone operateur compoosé ainsi : ![Schéma](https://github.com/juleslab14/SAE6.01-Project5/blob/main/schéma.jpg)

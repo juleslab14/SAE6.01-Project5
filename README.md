@@ -13,3 +13,6 @@
 ## Jules est gentil :) l'inverse de martin
 # FLORIAANAAAN EST UN GROS GROS GROS GROS BG
 
+```bash
+sudo apt install tamère
+```

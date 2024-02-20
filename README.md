@@ -1,4 +1,4 @@
-#Lancement du playbook Ansible
+# Lancement du playbook Ansible
 Vous devez exécuter les commandes suivantes dans la machine "Network Automation"
 
 ```bash

@@ -14,7 +14,7 @@
 # FLORIAANAAAN EST UN GROS GROS GROS GROS BG
 
 ```bash
-sudo apt install tamère
+sudo apt install tamère 
 ```
 ```java
 public class bg {

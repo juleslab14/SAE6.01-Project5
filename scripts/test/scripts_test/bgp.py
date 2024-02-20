@@ -29,7 +29,7 @@ if __name__ == '__main__':
     #paramètres des routeurs
     device = {
         'device_type': 'cisco_ios',
-        'host': 'R3',
+        'host': '192.168.100.254',
         'username': 'admin',
         'password': 'admin',
         'secret': 'admin',

@@ -2,8 +2,9 @@
 - name: bgp c'est de la merde je deteste ansible je veux mourir
   hosts: all
   remote_user: admin
+
   tasks:
-  - name: bgggggppp
+  - name: bgp c'est de la merde je deteste ansible je veux mourir
     bgp3:
       yaml_file: ./bgp_config.yml
       jinja2_template: ./bgp_template.j2

@@ -36,7 +36,7 @@ if __name__ == '__main__':
     }
 
     #chemin des fichiers
-    yaml_file = 'bgp_config.yaml'
+    yaml_file = 'bgp_config.yml'
     jinja2_template = 'bgp_template.j2'
 
     #mise en place de conf sur les routeurs

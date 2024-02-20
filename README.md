@@ -16,3 +16,6 @@
 ```bash
 sudo apt install tamère
 ```
+```java
+system.out.println("Florian tu es beau");
+```

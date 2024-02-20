@@ -1,3 +1,15 @@
+DOCUMENTATION = r'''
+
+---
+
+module: bgp3
+
+short_description: Récupère les valueurs des fichiers yml et jinja pour configurer un 
+
+author: 
+    - Ronan & Léo
+'''
+
 import yaml
 from jinja2 import Environment, FileSystemLoader
 from netmiko import ConnectHandler
@@ -49,3 +61,13 @@ if __name__ == '__main__':
         module.exit_json(changed=True, msg="BGP configuration applied successfully.")
     except Exception as e:
         module.fail_json(msg="Failed to apply BGP configuration: {}".format(str(e)))
+
+
+def main():
+
+   run_module()
+
+if __name__ == '__main__':
+
+   main()
+

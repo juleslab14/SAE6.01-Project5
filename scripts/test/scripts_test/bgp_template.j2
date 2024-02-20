@@ -1,4 +1,5 @@
 en
+admin
 conf t
 {% for router_config in bgp_config -%}
     router bgp {{ router_config.asn }}

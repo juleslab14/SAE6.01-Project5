@@ -41,8 +41,8 @@ if __name__ == '__main__':
 
     module = AnsibleModule(argument_spec=module_args, supports_check_mode=True)
 
-    yaml_file = module.params['yaml_file']
-    jinja2_template = module.params['jinja2_template']
+    yaml_file = module.params['bgp_config']
+    jinja2_template = module.params['bgp_template']
     host = module.params['R3']
     username = module.params['admin']
     password = module.params['admin']

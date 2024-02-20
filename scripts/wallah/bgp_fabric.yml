@@ -1,4 +1,0 @@
----
- - hosts: routers
-   connection: local
-   

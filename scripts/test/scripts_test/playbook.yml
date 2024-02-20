@@ -3,11 +3,11 @@
   hosts: all
   remote_user: admin
   tasks:
-    - name: bgggggppp
-      bgp3:
-        yaml_file: ./bgp_config.yml
-        jinja2_template: ./bgp_template.j2
-        host: 192.168.100.254
-        username: admin
-        password: admin
-        secret: admin
+  - name: bgggggppp
+    bgp3:
+      yaml_file: ./bgp_config.yml
+      jinja2_template: ./bgp_template.j2
+      host: 192.168.100.254
+      username: admin
+      password: admin
+      secret: admin

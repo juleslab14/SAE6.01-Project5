@@ -1,3 +1,5 @@
+en
+conf t
 {% for router_config in bgp_config -%}
     router bgp {{ router_config.asn }}
     bgp router-id {{ router_config.router_id }}

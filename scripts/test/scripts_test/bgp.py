@@ -13,6 +13,7 @@ def render_template_jinja(template_path, yaml_data):
 def apply_config(device, config):
     #Connection au routeur en SSH
     with ConnectHandler(**device) as ssh:
+        output=net_conect.send_command("en",device['secret'])
         #envoie des commandes pour la configuration
         ssh.send_config_set(config)
 

@@ -1,0 +1,12 @@
+router bgp {{ asn }}
+router-id {{ router_id }}
+no address-family ipv4 unicast
+{% for neighbor in bgp_neighbors -%}
+    neighbor {{ neighbor['neighbor'] }} remote-as {{ neighbor['remote_as'] }}
+    neighbor {{ neighbor['neighbor'] }} update-source {{ neighbor['update_source'] }}
+{% endfor -%}
+address-family ipv4 unicast
+{% for af in ipv4_unicast -%}
+    neighbor {{ af['neighbor'] }} activate
+{% endfor -%}
+

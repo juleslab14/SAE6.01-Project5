@@ -1,0 +1,44 @@
+création d'un fichier cfg
+
+nano ansible.cfg
+
+[defaults]
+inventory = ./myhosts
+host_key_checking = false
+timeout = 15
+deprecation_warning=false
+
+nano /etc/hosts
+
+192.168.100.254 R3
+
+nano myhosts
+
+[routers]
+R3
+
+ospf.yml
+---
+-   name: Configure OSPF
+    hosts: routers
+    gather_facts: false
+    connection: local
+
+    vars:
+        cli:
+            username: admin
+            password: admin
+    
+    tasks:
+        -   name: ospf
+            ios_config:
+                provider:"{{ cli }}
+                authorize: yes
+                parents: router ospf 1
+                lines:
+                    - network 0.0.0.0 255.255.255.255 area 0 #c'est un test
+                register: print_output
+
+        -   debug: var=print_output
+
+ansible-playbook ospf.yml -u cisco -k

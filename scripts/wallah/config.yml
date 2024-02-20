@@ -33,7 +33,9 @@ task:
 
 tasks:
 - name: bgp config avec template jinja2
-  connection: local
+  hosts: routers
+  connection: network_cli
+  gather_facts: false
   template:
     src: router_bgp.j2
     dest: {{inventory_hostname}}.cfg

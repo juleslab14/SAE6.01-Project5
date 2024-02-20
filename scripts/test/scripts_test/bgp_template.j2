@@ -9,8 +9,8 @@
         neighbor {{ neighbor.ip }} description {{ neighbor.description }}
     {% endfor -%}
 
-    {% for af, af_config in router_config.address_family -%}
-        address-family {{ af }}
+    {% for af_config in router_config.address_family -%}
+        address-family ipv4
             {% for neighbor_af in af_config -%}
                 neighbor {{ neighbor_af.neighbor }} activate
             {% endfor -%}

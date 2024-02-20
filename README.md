@@ -1,28 +1,7 @@
-- Salut les amis, bienvenue à la maison 
-- Aujourd'hui c'est Ansible 
-- Hop maître d'hotel un routeur BGP pour la table 9
-- C'est super nickel
-# Florian tu es ma muse 
-# Florian je t'aime <3
-# Florian veux-tu sortir avec moi ? 
-# Florian je veux te faire l'amour ma beauté sur devant la cheminée 
-# Florian tu es un énorme bg
-# Florian je veux te faire l'amour ma beauté juste devant la cheminée 
-## Ronan est un énorme bg (et énorme je veux dire qu'il gros ce con)
-## Léo est vieux
-## Jules est gentil :) l'inverse de martin
-# FLORIAANAAAN EST UN GROS GROS GROS GROS BG
+#Lancement du playbook Ansible
+Vous devez exécuter les commandes suivantes dans la machine "Network Automation"
 
 ```bash
-sudo apt install tamère 
+ansible-playbook config.yml -u admin -k
 ```
-```java
-public class bg {
-
-    public static void main( String [] args ) {
-        System.out.println( "salut bg" );
-    }
-
-}
-```
-[le goat](https://www.youtube.com/watch?v=mILHQ05nUIc&ab_channel=ChefMichelDumas)
+Le playbook permet (normalement) la configuration bgp d'un routeur en utilisant une template Jinja2

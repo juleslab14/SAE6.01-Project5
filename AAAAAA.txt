@@ -41,4 +41,4 @@ ospf.yml
 
         -   debug: var=print_output
 
-ansible-playbook ospf.yml -u cisco -k
+ansible-playbook ospf.yml -u admin -k

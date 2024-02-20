@@ -9,7 +9,7 @@ task:
     cli:
       username: admin
       password: admin
-  - bgp_config:
+- bgp_config:
     router_id: 192.168.0.3
     asn: 100
     bgp_neighbors:
@@ -38,8 +38,8 @@ tasks:
   gather_facts: false
   template:
     src: router_bgp.j2
-    dest: {{inventory_hostname}}.cfg
+    dest: hosts.cfg
 - name: push la conf
   ios_config:
-    src: {{inventory_hostname}}.cfg
+    src: hosts.cfg
 

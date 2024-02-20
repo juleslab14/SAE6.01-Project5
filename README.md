@@ -17,5 +17,12 @@
 sudo apt install tamère
 ```
 ```java
-system.out.println("Florian tu es beau");
+public class bg {
+
+    public static void main( String [] args ) {
+        System.out.println( "salut bg" );
+    }
+
+}
 ```
+

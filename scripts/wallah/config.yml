@@ -1,4 +1,5 @@
 ---
+task:
 - name: Configure BGP
   hosts: routers
   gather_facts: false
@@ -8,30 +9,27 @@
     cli:
       username: admin
       password: admin
-
-tasks:
-  - name: config_bgp
-    - bgp_config:
-      router_id: 192.168.0.3
-      asn: 100
-      bgp_neighbors:
-      - remote_as: 55
-        neighbor: 192.168.0.2
-        update_source: Loopback0
-      - remote_as: 55
-        neighbor: 192.168.0.4
-        update_source: Loopback0
-      - remote_as: 55
-        neighbor: 192.168.0.1
-        update_source: Loopback0
-      address_family:
-        ipv4_unicast:
-          - neighbor: '192.186.0.2'
-            #activate: true
-          - neighbor: '192.186.0.4'
-            #activate: true
-          - neighbor: '192.186.0.1'
-            #activate: true
+  - bgp_config:
+    router_id: 192.168.0.3
+    asn: 100
+    bgp_neighbors:
+    - remote_as: 55
+      neighbor: 192.168.0.2
+      update_source: Loopback0
+    - remote_as: 55
+      neighbor: 192.168.0.4
+      update_source: Loopback0
+    - remote_as: 55
+      neighbor: 192.168.0.1
+      update_source: Loopback0
+    address_family:
+      ipv4_unicast:
+        - neighbor: '192.186.0.2'
+          #activate: true
+        - neighbor: '192.186.0.4'
+          #activate: true
+        - neighbor: '192.186.0.1'
+          #activate: true
 
 tasks:
 - name: bgp config avec template jinja2

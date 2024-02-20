@@ -1,0 +1,37 @@
+---
+bgp_config:
+  - name: 'R3'
+    bgpasn: '55'
+    router_id: "192.168.0.3"
+    default: "ipv4-unicast"
+    bgp_neighbors:
+      - ip: '192.186.0.2'
+        remote_as: '55'
+        update_source: "Loopback0"
+        description: "voisin 1"
+      - ip: '192.168.0.4'
+        remote_as: '55'
+        update_source: "Loopback0"
+        description: "voisin 2"
+      - ip: '192.168.0.1'
+        remote_as: '55'
+        update_source: "Loopback0"
+        description: "voisin 3"
+    address_family:
+      ipv4_unicast:
+        - neighbors: '192.186.0.2'
+          activate: true
+        - neighbors: '192.186.0.4'
+          activate: true
+        - neighbors: '192.186.0.1'
+          activate: true
+  #- name: 'R2' #à faire pour les differents routeurs c'est pas super opti mais bon c'est déjà un début :)
+  #  interfaces:
+  #    - name: "Ethernet1/1"
+  #      state: "enabled"
+  #      ip: "10.10.10.2"
+  #      mask: "255.255.255.0"
+  #  bgpasn: "101"
+  #  bgp_neighbors:
+  #    - ip: "10.10.10.1"
+  #      remote_as: "100"

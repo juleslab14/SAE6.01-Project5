@@ -2,6 +2,10 @@
 
 ## Il s'agit de modules provenant de la collection cisco.ios, qui a été testée intégralement sur la version 17.3 d'IOS XE dans Cisco Moduling Labs (CML)
 
+## La collection ios est possiblement incluse de base dans le paquet "ansible", mais pas dans le paquet "ansible-core"
+
+![ios](./ios_collection.png)
+
 La collection a été testée avec les versions >= 2.14.0 d'Ansible. Chacun des modules contient dans sa page de documentation des exemples d'utilisation du module dans la catégorie "Notes", et notamment l'effet des commandes envoyées sur la configuration.
 source de la collection : <https://galaxy.ansible.com/ui/repo/published/cisco/ios/>
 

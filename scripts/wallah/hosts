@@ -1,6 +1,0 @@
-[routers]
-R3 ansible_host=192.168.100.254 ansible_user=admin ansible_password=yadmin ansible_enable_password=admin
-
-[routers_pe]
-PE1 ansible_host=192.168.100.1 ansible_user=admin ansible_password=yadmin ansible_enable_password=admin
-PE2 ansible_host=192.168.100.3 ansible_user=admin ansible_password=yadmin ansible_enable_password=admin

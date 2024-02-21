@@ -1,8 +1,0 @@
-{{ device }}
-
-router bgp {{ bgpasn }}
-bgp router-id {{ int.loopback }}
-{% for neighbor in bgp_neighbor -%}
-    neighbor {{ neighbor.ip }} remote-as {{ neighbor.remote_as}}
-    neighbor {{ neighbor.ip }} update-source {{ int.loopback }}
-{% endfor -%}

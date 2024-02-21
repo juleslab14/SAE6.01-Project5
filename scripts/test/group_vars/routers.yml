@@ -1,7 +1,0 @@
----
-ansible_connections: ansible.netcommon.network_cli
-ansible_network_os: cisco.ios.ios
-ansible_become: yes
-ansible_become_method: "enabled"
-ansible_user: admin
-ansible_password: Adminetu1 #utiliser Ansible Vault si besoin pour chiffrer les données

@@ -1,0 +1,33 @@
+---
+- name: Configure BGP
+  hosts: routers
+  gather_facts: false
+  connection: local
+  remote_user: admin
+
+  vars:
+    cli:
+      username: admin
+      password: admin
+
+  tasks:
+
+- name: config bgp
+  cisco.ios.ios_bgp_global:
+    config:
+      router_id: {{ router_id }}
+      bgp_as: {{ bgp_as }}
+      neighbors:
+      {% for neighbor in neighbors -%}
+       - address: {{neighbor.address}}
+         remote_as: {{neighbor.remote_as}}
+         update_source: {{neighbor.update_source}}
+      {% endfor -%}
+      address_family:
+       - afi: ipv4
+         safi: unicast
+         neighbors:
+           {%  for neighbor in neighbors -%}
+          - neighbor: {{neighbor.address}}
+            activate: true
+            {% endfor -%}

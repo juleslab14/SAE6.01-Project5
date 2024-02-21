@@ -18,16 +18,12 @@
         router_id: {{ router_id }}
         bgp_as: {{ asn }}
         neighbors:
-          {% for neighbor in neighbors -%}
-          - address: {{neighbor.address}}
-            remote_as: {{asn}}
-            update_source: {{update_source}}
-          {% endfor -%}
+        - address: {{neighbor.address}}
+          remote_as: {{asn}}
+          update_source: {{update_source}}
         address_family:
         - afi: ipv4
           safi: unicast
           neighbors:
-            {%  for neighbor in neighbors -%}
-            - neighbor: {{neighbor.address}}
-              activate: true
-            {% endfor -%}
+          - neighbor: {{neighbor.address}}
+            activate: true

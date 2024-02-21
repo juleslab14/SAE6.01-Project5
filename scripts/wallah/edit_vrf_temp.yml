@@ -1,7 +1,7 @@
 ---
 task:
 - name: Creation d'une vrf
-  hosts: routers_pe
+  hosts: routers
   gather_facts: false
   connection: local
 

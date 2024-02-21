@@ -1,0 +1,4 @@
+---
+router_id: 192.168.0.5
+neighbor:
+  - address: 192.168.0.2

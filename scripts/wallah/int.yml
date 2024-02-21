@@ -1,0 +1,5 @@
+---
+- name: Configuration des interfaces
+  cisco.ios.ios_interfaces:
+      running_config: "{{ lookup('file', 'config.cfg') }}"
+      state: parsed

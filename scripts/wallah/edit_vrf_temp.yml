@@ -1,11 +1,12 @@
 ---
 task:
-- name: Creation de vrf
+- name: Creation d'une vrf
+  hosts: routers_pe
+  gather_facts: false
+  
   ios_vrf:
     name: vrf1
     description : vrf test
     rd: 1:100
-    route_import:
-      - 1:100
-    route_export:
+    route_both:
       - 1:100

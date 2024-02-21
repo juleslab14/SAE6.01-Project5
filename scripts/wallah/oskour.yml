@@ -18,12 +18,13 @@
         router_id: {{ router_id }}
         bgp_as: {{ asn }}
         neighbors:
-        - address: {{neighbor.address}}
+        - address: {{item.address}}
           remote_as: {{asn}}
           update_source: {{update_source}}
         address_family:
         - afi: ipv4
           safi: unicast
           neighbors:
-          - neighbor: {{neighbor.address}}
+          - neighbor: {{item.address}}
             activate: true
+    loop: {{ neighbor }}

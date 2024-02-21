@@ -20,7 +20,7 @@
         neighbors:
         {% for neighbor in neighbors -%}
         - address: {{neighbor.address}}
-          remote_as: {{remote_as}}
+          remote_as: {{asn}}
           update_source: {{update_source}}
         {% endfor -%}
         address_family:

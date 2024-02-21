@@ -1,0 +1,11 @@
+---
+task:
+- name: Creation de vrf
+  ios_vrf:
+    name: vrf1
+    description : vrf test
+    rd: 1:100
+    route_import:
+      - 1:100
+    route_export:
+      - 1:100

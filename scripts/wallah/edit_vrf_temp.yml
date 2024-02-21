@@ -3,7 +3,8 @@ task:
 - name: Creation d'une vrf
   hosts: routers_pe
   gather_facts: false
-  
+  connection: local
+
   ios_vrf:
     name: vrf1
     description : vrf test

@@ -24,9 +24,27 @@
       name: Client_A
       interfaces:
         - "{{int_vrf}}"
+      state: present
+  - name: ip forwarding vrf sur PE1
+    cisco.ios.ios_command:
+      command:
+        - "conf t"
+        - "interface GigabitEthernet 1"
+        - "vrf forwarding Client_A"
+        - "no shutdown"
+    when: ansible_hostname == 'PE1'
+  - name: ip forwarding vrf sur PE2
+    cisco.ios.ios_command:
+      command:
+        - "conf t"
+        - "interface GigabitEthernet 2"
+        - "vrf forwarding Client_A"
+        - "no shutdown"
+    when: ansible_hostname == 'PE2'
   - name: addresse ip des interfaces
     cisco.ios.ios_l3_interfaces:
       config:
         - name: "{{int_vrf}}"
           ipv4:
             - address: "{{ip}}"
+          enabled: true

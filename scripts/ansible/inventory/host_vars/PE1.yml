@@ -4,3 +4,4 @@ address: 192.168.0.5
 interface: GigabitEthernet2
 int_vrf: GigabitEthernet1
 ip: 192.168.10.8/31
+ansible_hostname: PE1

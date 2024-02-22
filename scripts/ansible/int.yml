@@ -1,6 +1,6 @@
 ---
 - name: Configuration des interfaces
-  hosts: routers
+  hosts: routers_mpls
   gather_facts: false
   connection: network_cli
   remote_user: admin
@@ -11,7 +11,13 @@
       password: admin
   
   tasks:
-  - name: config mtu mpls
+  - name: Config mtu
+    cisco.ios.ios_interfaces:
+      config:
+        - name: "{{interface}}"
+          mtu: 1550
+
+  - name: verif mtu mpls
     cisco.ios.ios_interfaces:
         running_config: "{{ lookup('file', 'config.cfg') }}"
         state: parsed

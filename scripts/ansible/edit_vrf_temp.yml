@@ -14,7 +14,8 @@
   - name: creation de la vrf
     cisco.ios.ios_vrf:
       name: Client_A
-      description : vrf test
+      description: vrf test
       rd: 1:100
       route_both:
         - 1:100
+      state: present

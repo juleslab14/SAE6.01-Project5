@@ -39,7 +39,7 @@ ansible-playbook bgp.yml
 
 Le playbook permet la configuration bgp d'un routeur.
 ```
-message de steelbreaker: 
+message de brisacier: 
 avec les pré-requis, comment utiliser le projet
 axes d'amélioration
 ```

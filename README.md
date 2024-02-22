@@ -40,8 +40,3 @@ ansible-playbook bgp.yml #configuration bgp et des vrfS
 ```
 
 Le playbook permet la configuration bgp sur les routeurs PE et la création des vrf sur les routeurs (les routeurs R et PE (je crois))
-
-message de  Monsieur Brisacier: 
-avec les pré-requis, comment utiliser le projet
-axes d'amélioration
-```

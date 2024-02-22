@@ -5,3 +5,4 @@ remote_as: 65550
 neighbors_address: 192.168.10.9
 interface: GigabitEthernet2
 int_vrf: GigabitEthernet1
+ip: 192.168.10.8/31

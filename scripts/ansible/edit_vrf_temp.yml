@@ -19,3 +19,14 @@
       route_both:
         - 1:100
       state: present
+  - name: assignation de la vrf
+    cisco.ios.ios_vrf:
+      name: Client_A
+      interfaces:
+        - "{{int_vrf}}"
+  - name: addresse ip des interfaces
+    cisco.ios.ios_l3_interfaces:
+      config:
+        - name: "{{int_vrf}}"
+          ipv4:
+            - address: "{{ip}}"

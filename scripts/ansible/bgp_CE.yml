@@ -1,5 +1,4 @@
 ---
-task:
 - name: Configure BGP
   hosts: routers_CE
   gather_facts: false
@@ -10,7 +9,7 @@ task:
     cli:
       username: admin
       password: admin
-  task:
+  tasks:
   - name: config BGP CE
     cisco.ios.ios_bgp_global:
       config:

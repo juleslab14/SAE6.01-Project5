@@ -13,8 +13,10 @@ Le dossier *scripts* quant à lui contient les différents fichiers et playbooks
 |       -- ztp
 |-- scripts                     #playbook et les fichiers de variables/conf utilisés dans le projet
 |       -- ansible
+           config.cfg
            ansibles.cfg
            bgp.yml
+           bgp_CE.yml
 |           -- inventory
                hosts.ini
 |             -- group_vars

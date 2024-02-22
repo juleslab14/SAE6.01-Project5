@@ -1,2 +1,4 @@
 ---
-
+interface:
+  - GigabitEthernet1
+  - GigabitEthernet3

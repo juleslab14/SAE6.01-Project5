@@ -1,7 +1,7 @@
 ---
 task:
 - name: Configure BGP
-  hosts: routers
+  hosts: routers_CE
   gather_facts: false
   connection: network_cli
   remote_user: admin
@@ -11,17 +11,13 @@ task:
       username: admin
       password: admin
   task:
-  - name: config BGP
+  - name: config BGP CE
     cisco.ios.ios_bgp_global:
       config:
-        as_number: "{{asn}}"
+        as_number: "{{as_number}}"
         bgp:
           router_id:
             address: "{{router_id}}"
         neighbors:
-        - address: "{{address}}"
-          remote_as: "{{asn}}"
-          update_source: "{{update_source}}"
         - address: "{{neighbors_address}}"
           remote_as: "{{remote_as}}"
-

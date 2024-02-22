@@ -23,4 +23,3 @@
           update_source: "{{update_source}}"
         - address: "{{neighbors_address}}"
           remote_as: "{{remote_as}}"
-

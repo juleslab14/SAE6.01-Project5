@@ -12,20 +12,28 @@ Le dossier *scripts* quant à lui contient les différents fichiers et playbooks
 |       -- EVE-NG vs GNS3
 |       -- ztp
 |-- scripts                     #Scripts et playbooks utilisés dans le projet
-|       -- wallah (à renommer)
+|       -- ansible
+           ansibles.cfg
+           bgp.yml
 |           -- inventory
+              -- group_vars
+                 all.yml
+              -- host_vars
+                 PE2.yml
+                 PE1.yml
+                 etc
 ```
 
 ## Prérequis pour le projet
 
-Lorem Ipsum Dolor sit amet
+Avoir Python sur les routeurs
 
 ## Lancement du playbook Ansible
 
-Vous devez exécuter les commandes suivantes dans la machine "Network Automation".
+Vous devez exécuter les commandes suivantes dans la machine "Network Automation" et dans le répertoire ansible/.
 
 ```bash
-ansible-playbook config.yml -u admin -k
+ansible-playbook bgp.yml 
 ```
 
-Le playbook permet (normalement) la configuration bgp d'un routeur en utilisant une template Jinja2.
+Le playbook permet la configuration bgp d'un routeur.

@@ -7,11 +7,11 @@ Le dossier *Recherches* comprend toutes les recherches que nous avons effectuée
 Le dossier *scripts* quant à lui contient les différents fichiers et playbooks que nous avons utilisé pour configurer la maquette avec Ansible. Le sous-dossier *inventory* contient quant à lui tous les hôtes et leurs variables ainsi que les groupes et leurs variables.
 
 ```bash
-|-- Recherches
+|-- Recherches                  #Recherches documentaires liées au projet
 |       -- ansible
 |       -- EVE-NG vs GNS3
 |       -- ztp
-|-- scripts
+|-- scripts                     #Scripts et playbooks utilisés dans le projet
 |       -- wallah (à renommer)
 |           -- inventory
 ```

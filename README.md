@@ -11,14 +11,15 @@ Le dossier *scripts* quant à lui contient les différents fichiers et playbooks
 |       -- ansible
 |       -- EVE-NG vs GNS3
 |       -- ztp
-|-- scripts                     #Scripts et playbooks utilisés dans le projet
+|-- scripts                     #playbook et les fichiers de variables/conf utilisés dans le projet
 |       -- ansible
            ansibles.cfg
            bgp.yml
 |           -- inventory
-              -- group_vars
+               hosts.ini
+|             -- group_vars
                  all.yml
-              -- host_vars
+|             -- host_vars
                  PE2.yml
                  PE1.yml
                  etc
@@ -26,7 +27,7 @@ Le dossier *scripts* quant à lui contient les différents fichiers et playbooks
 
 ## Prérequis pour le projet
 
-Avoir Python sur les routeurs
+Avoir Python sur les routeurs et ansible sur la machine 
 
 ## Lancement du playbook Ansible
 
@@ -37,3 +38,8 @@ ansible-playbook bgp.yml
 ```
 
 Le playbook permet la configuration bgp d'un routeur.
+```
+message de steelbreaker: 
+avec les pré-requis, comment utiliser le projet
+axes d'amélioration
+```

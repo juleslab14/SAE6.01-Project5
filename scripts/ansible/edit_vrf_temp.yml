@@ -1,13 +1,20 @@
 ---
-task:
 - name: Creation d'une vrf
   hosts: routers
   gather_facts: false
-  connection: local
+  connection: network_cli
+  remote_user: admin
 
-  cisco.ios.ios_vrf:
-    name: vrf1
-    description : vrf test
-    rd: 1:100
-    route_both:
-      - 1:100
+  vars:
+    cli:
+      username: admin
+      password: admin
+
+  tasks:
+  - name: creation de la vrf
+    cisco.ios.ios_vrf:
+      name: Client_A
+      description : vrf test
+      rd: 1:100
+      route_both:
+        - 1:100

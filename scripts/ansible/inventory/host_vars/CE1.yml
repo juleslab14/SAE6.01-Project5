@@ -1,5 +1,0 @@
----
-router_id: 192.168.0.6
-as_number: 65550
-remote_as: 55
-neighbors_address: 192.168.100.8

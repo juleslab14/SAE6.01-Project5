@@ -32,7 +32,7 @@ Le dossier *scripts* quant à lui contient les différents fichiers et playbooks
 Dans le scénario de notre projet, nous avons un schéma gns3 avec des routeurs CSR1000v avec une configuration ospf opérationnel, des interfaces up et l’accès SSH sur les routeurs afin qu’ansible puisse mettre en place la configuration bgp et les vrf. Nous avons également besoin d’une machine avec ansible dessus pour exécuter les playbook, dans notre scénario, nous avons utilisé l’appliance GNS3 “Network Automation”, il s’agit d’une VM avec ansible installée dessus.
 
 - GNS3
-- routeurs avec une configuration (ospf, interfaces, pythoon sur le routeur, ssh)
+- routeurs avec une configuration (ospf, interfaces, python sur le routeur, ssh)
 - Machine Virtuelle avec Ansible
 
 ## Lancement du playbook Ansible

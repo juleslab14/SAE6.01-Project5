@@ -29,11 +29,8 @@ Le dossier *scripts* quant à lui contient les différents fichiers et playbooks
 
 ## Prérequis pour le projet
 
-Dans le scénario de notre projet, nous avons un schéma gns3 avec des routeurs CSR1000v avec une configuration ospf opérationnel, des interfaces up et l’accès SSH sur les routeurs afin qu’ansible puisse mettre en place la configuration bgp et les vrf. Nous avons également besoin d’une machine avec ansible dessus pour exécuter les playbook, dans notre scénario, nous avons utilisé l’appliance GNS3 “Network Automation”, il s’agit d’une VM avec ansible installée dessus.
-
-- GNS3
-- routeurs avec une configuration (ospf, interfaces, python sur le routeur, ssh)
-- Machine Virtuelle avec Ansible
+Dans le scénario de notre projet, nous avons un schéma GNS3 avec des routeurs CSR1000v17.02.03 avec une configuration ospf et mpls opérationnel, les résaux d'interconnexion et l’accès SSH sur les routeurs afin qu’ansible puisse mettre en place la configuration bgp et les vrf. Nous avons également besoin d’une machine avec ansible dessus pour exécuter les playbook, dans notre scénario, nous avons utilisé l’appliance GNS3 “Network Automation”, il s’agit d’une VM avec ansible installée dessus.
+Pour des raisons de simplicité le routage CE-PE serait fait grace à du routage static.
 
 ## Lancement du playbook Ansible
 
@@ -43,4 +40,4 @@ Vous devez exécuter les commandes suivantes dans la machine "Network Automation
 ansible-playbook bgp.yml #configuration bgp et des vrfS
 ```
 
-Le playbook permet la configuration bgp sur les routeurs PE et la création des vrf sur les routeurs (les routeurs R et PE (je crois))
+Le playbook permet la configuration bgp sur les routeurs PE, la création des vrf ainsi que de l'appliquer sur les interfaces d'interconnexion PE-CE.

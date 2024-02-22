@@ -1,0 +1,25 @@
+---
+task:
+- name: Configure BGP
+  hosts: routers
+  gather_facts: false
+  connection: network_cli
+  remote_user: admin
+
+  vars:
+    cli:
+      username: admin
+      password: admin
+  task:
+  - name: config BGP
+    cisco.ios.ios_bgp_global:
+      config:
+        as_number: "{{asn}}"
+        bgp:
+          router_id:
+            address: "{{router_id}}"
+        neighbors:
+        - address: "{{address}}"
+          remote_as: "{{asn}}"
+          update_source: "{{update_source}}"
+

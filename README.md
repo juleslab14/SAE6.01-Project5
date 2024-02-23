@@ -41,3 +41,12 @@ ansible-playbook bgp.yml #configuration bgp et des vrfS
 ```
 
 Le playbook permet la configuration bgp sur les routeurs PE, la création des vrf ainsi que de l'appliquer sur les interfaces d'interconnexion PE-CE.
+
+## Axes d'amélioration
+
+Durant le projet, nous n'avons pas pu mettre en place plusieures choses que nous allons présenter sous forme d'axes d'amélioration :
+
+- Mettre en place l'automatisation du MPLS sur les routeurs R1, R2, R3, PE1 et PE2. Puisqu'il n'y avait plus de module ansible pour configurer MPLS, nous avons dû le configurer à la main.
+- Mettre en place des boucles dans les playbooks afin qu'ils puissent s'adapter à différents scénarios, contrairement à l'unique scénario de notre projet.
+- Automatiser la création de la session BGP entre PE1 et CE1 et celle entre CE2 et PE2.
+- Utiliser ZTP pour la configuration BGP des CE.

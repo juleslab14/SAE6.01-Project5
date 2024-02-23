@@ -1,6 +1,8 @@
 ---
 router_id: 192.168.0.5
 address: 192.168.0.4
+remote_as: 65514
+neighbors_address: 192.168.10.11
 interface: GigabitEthernet1
 int_vrf: GigabitEthernet2
 ip: 192.168.10.10/31

@@ -31,4 +31,3 @@ Choix final : VM Ubuntu serveur (install plus facile, par script) avec l'ip 192.
 
 La lab est composé de 5 routeurs cisco 7200 ainsi que deux VM, une pour l'automatisation avec ansible et une autre pour faire des tests sur le ZTP, cela nous permet de simuler un petit backbone operateur compoosé ainsi : ![Schéma](https://github.com/juleslab14/SAE6.01-Project5/blob/main/schema_v5.2.png)
 
-Mettre OSPF à la mano
